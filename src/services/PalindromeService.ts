@@ -1,7 +1,4 @@
-type PalindromeRequest = {
-    initialInterval: number;
-    finalInterval: number;
-}
+import { PalindromeDto } from '../dto/palindrome.dto';
 
 export class PalindromeService {
 
@@ -12,7 +9,9 @@ export class PalindromeService {
         return numberString === reversedNumberString;
     }
 
-    async getPalindromes({initialInterval, finalInterval}: PalindromeRequest): Promise<any> {
+    async getPalindromes(palindromeData: PalindromeDto): Promise<any> {
+        
+        const { initialInterval, finalInterval } = palindromeData;
         const palindromes = [];
 
         for (let currentNumber = initialInterval; currentNumber <= finalInterval; currentNumber++) {

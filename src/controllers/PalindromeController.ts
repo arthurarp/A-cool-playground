@@ -3,11 +3,10 @@ import { PalindromeService } from '../services/PalindromeService';
 
 export class PalindromeController {
     async handle(request: Request, response: Response) {
-        const { initialInterval, finalInterval } = request.body;
 
         const palindromeService = new PalindromeService();
 
-        const result = await palindromeService.getPalindromes({initialInterval, finalInterval});
+        const result = await palindromeService.getPalindromes(request.body);
 
         return response.json(result);
     }
