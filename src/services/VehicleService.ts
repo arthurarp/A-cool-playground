@@ -21,16 +21,15 @@ export class VehicleService {
             const result = car.setCarDoors(vehicleData.carDoors);
 
             if (result instanceof Error) {
-                
                 return result;
             }
-
+            
             return this.saveData(car);
-
+            
         } else if (vehicleData.type === 'motorcycle') {
             const motorcycle = new Motorcycle(vehicleData);
             const result = motorcycle.setMotorcyclePassengersCapacity(vehicleData.passengersCapacity);
-
+            
             if (result instanceof Error) {
                 
                 return result;

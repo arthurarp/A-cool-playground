@@ -3,7 +3,7 @@ import { ChangeDto, NotesDto } from '../dto/change.dto';
 export class ChangeService {
 
     getNotes(change: number): NotesDto {
-        const notes = {
+        const notes: NotesDto = {
             ones: 0,
             tens: 0,
             hundreds: 0,

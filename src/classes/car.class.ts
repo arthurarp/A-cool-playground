@@ -1,6 +1,7 @@
 import { Vehicle } from './vehicle.class';
 
 export class Car extends Vehicle {
+    carDoors: number;
 
     constructor(vehicleData: any) {
         super();
@@ -10,11 +11,11 @@ export class Car extends Vehicle {
     
     }
 
-    getCarDoors() {
+    getCarDoors() : number {
         return this.carDoors;
     }
 
-    setCarDoors(carDoors: number) {
+    setCarDoors(carDoors: number) : number|Error {
         if (carDoors == 2 || carDoors == 4) {
             this.carDoors = carDoors;
         } else {

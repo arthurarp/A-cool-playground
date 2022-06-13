@@ -12,11 +12,11 @@ export class Motorcycle extends Vehicle {
         this.wheels = 2;
     }
 
-    getMotorcyclePassengersCapacity() {
+    getMotorcyclePassengersCapacity() : number {
         return this.passengersCapacity;
     }
 
-    setMotorcyclePassengersCapacity(capacity: number) {
+    setMotorcyclePassengersCapacity(capacity: number) : number|Error {
         if (capacity == 1 || capacity == 2) {
             this.passengersCapacity = capacity;
         } else {

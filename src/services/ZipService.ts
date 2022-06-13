@@ -1,5 +1,5 @@
 import { ZipDto } from '../dto/zip.dto';
-import apiInstance from '../api/main';
+import axios from 'axios';
 
 export class ZipService {
 
@@ -11,7 +11,8 @@ export class ZipService {
 
         for(let i = 0; i < zipcodesList.length; i++) {
             try {
-                const response = await apiInstance.get(`/ws/${zipcodesList[i]}/json/`);
+                
+                const response = await axios.get(`https://viacep.com.br/ws/${zipcodesList[i]}/json/`);
                 zipCodesData[zipcodesList[i]] = response.data;
 
             } catch (err) {
