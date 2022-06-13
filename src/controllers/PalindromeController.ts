@@ -7,6 +7,6 @@ export class PalindromeController {
 
         const result = await palindromeService.getPalindromes(request.body);
 
-        return response.json(result);
+        return response.status(200).json(result);
     }
 }

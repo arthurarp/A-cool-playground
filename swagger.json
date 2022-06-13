@@ -1,0 +1,210 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Kukac Challenge API Documentation",
+        "description": "Arthur Alves Rodrigues Pinto (arthurarp@hotmail.com)",
+        "version": "1.0.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "paths": {
+        "/palindrome": {
+            "post": {
+                "description": "Return the list of palindromes in the given interval",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "initialInterval": {
+                                        "type": "number",
+                                        "description": "Initial interval"
+                                    },
+                                    "finalInterval": {
+                                        "type": "number",
+                                        "description": "Final interval"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/change": {
+            "post": {
+                "description": "Returns change and amount of bills from a sale",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "amount": {
+                                        "type": "number",
+                                        "description": "Total Value"
+                                    },
+                                    "totalAmountPaid": {
+                                        "type": "number",
+                                        "description": "Total Paid"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/vehicle": {
+            "post": {
+                "description": "Add a vehicle to the local database (located at ./vehiclejsons folder at the root of the project). The 'type' field must be 'car' or 'motorcycle'",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "description": "Type of vehicle"
+                                    },
+                                    "model": {
+                                        "type": "string",
+                                        "description": "Model of vehicle"
+                                    },
+                                    "year": {
+                                        "type": "number",
+                                        "description": "Year of vehicle"
+                                    },
+                                    "brand": {
+                                        "type": "string",
+                                        "description": "Brand of vehicle"
+                                    },
+                                    "carDoors": {
+                                        "type": "number",
+                                        "description": "Number of doors"
+                                    },
+                                    "wheels": {
+                                        "type": "number",
+                                        "description": "Number of wheels"
+                                    },
+                                    "passengersCapacity": {
+                                        "type": "number",
+                                        "description": "Number of passengers"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "type": {
+                                            "type": "string",
+                                            "description": "Type of vehicle"
+                                        },
+                                        "model": {
+                                            "type": "string",
+                                            "description": "Model of vehicle"
+                                        },
+                                        "year": {
+                                            "type": "number",
+                                            "description": "Year of vehicle"
+                                        },
+                                        "brand": {
+                                            "type": "string",
+                                            "description": "Brand of vehicle"
+                                        },
+                                        "carDoors": {
+                                            "type": "number",
+                                            "description": "Number of doors"
+                                        },
+                                        "wheels": {
+                                            "type": "number",
+                                            "description": "Number of wheels"
+                                        },
+                                        "passengersCapacity": {
+                                            "type": "number",
+                                            "description": "Number of passengers"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/zipcode": {
+            "post": {
+                "description": "Return the data of a set of zipcodes. Please, type only numbers",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "zipcodeOne": {
+                                        "type": "string",
+                                        "description": "First zipcode"
+                                    },
+                                    "zipcodeTwo": {
+                                        "type": "string",
+                                        "description": "Second zipcode"
+                                    },
+                                    "zipcodeThree": {
+                                        "type": "string",
+                                        "description": "Third zipcode"
+                                    },
+                                    "zipcodeFour": {
+                                        "type": "string",
+                                        "description": "Fourth zipcode"
+                                    },
+                                    "zipcodeFive": {
+                                        "type": "string",
+                                        "description": "Fifth zipcode"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        }
+    }
+        
+}

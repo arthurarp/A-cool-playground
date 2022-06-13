@@ -1,0 +1,7 @@
+{
+	"model": "string",
+	"year": 0,
+	"brand": "string",
+	"wheels": 2,
+	"passengersCapacity": 2
+}
