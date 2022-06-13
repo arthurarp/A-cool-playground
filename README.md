@@ -61,3 +61,7 @@ Ao subir o servidor, a documentação Swagger se encontra em:
 ```
  localhost:3000/api-docs
 ```
+
+## Cobertura de testes
+
+![Cobertura de testes](./assets/coverage.png)
